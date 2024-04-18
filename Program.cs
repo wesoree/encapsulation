@@ -24,29 +24,30 @@ namespace encapsulation
             {
                 return 0;
             }
-            if (n == 1) { 
+            if (n == 1)
+            {
                 return n - Fibonacci(n - 1);
             }
 
             return Fibonacci(n - 1) + Fibonacci(n - 2);
         }
+    }
 
-        internal class Program
+    internal class Program
+    {
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-                Factorial f = new Factorial();
-                int  a = f.Fibonacci(0); //0
-                Console.WriteLine(a);
-                int b = f.Fibonacci(1); //1
-                Console.WriteLine(b);
-                int c = f.Fibonacci(2); //1
-                Console.WriteLine(c);
-                int d = f.Fibonacci(3); //2
-                Console.WriteLine(d);
-                int e = f.Fibonacci(6); //8
-                Console.WriteLine(e);
-            }
+            Factorial f = new Factorial();
+            int a = f.Fibonacci(0); //0
+            Console.WriteLine(a);
+            int b = f.Fibonacci(1); //1
+            Console.WriteLine(b);
+            int c = f.Fibonacci(2); //1
+            Console.WriteLine(c);
+            int d = f.Fibonacci(3); //2
+            Console.WriteLine(d);
+            int e = f.Fibonacci(6); //8
+            Console.WriteLine(e);
         }
     }
 }
