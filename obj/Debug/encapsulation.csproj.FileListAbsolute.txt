@@ -1,0 +1,7 @@
+C:\Users\low8365\source\repos\wesoree\encapsulation\obj\Debug\encapsulation.csproj.AssemblyReference.cache
+C:\Users\low8365\source\repos\wesoree\encapsulation\obj\Debug\encapsulation.csproj.CoreCompileInputs.cache
+C:\Users\low8365\source\repos\wesoree\encapsulation\bin\Debug\encapsulation.exe.config
+C:\Users\low8365\source\repos\wesoree\encapsulation\bin\Debug\encapsulation.exe
+C:\Users\low8365\source\repos\wesoree\encapsulation\bin\Debug\encapsulation.pdb
+C:\Users\low8365\source\repos\wesoree\encapsulation\obj\Debug\encapsulation.exe
+C:\Users\low8365\source\repos\wesoree\encapsulation\obj\Debug\encapsulation.pdb
