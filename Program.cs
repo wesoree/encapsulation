@@ -21,15 +21,36 @@ namespace encapsulation
         public int Fibonacci(int n)
         {
             if (n == 0)
-            {
                 return 0;
-            }
+            
             if (n == 1)
-            {
                 return 1;
-            }
+            
 
             return Fibonacci(n - 1) + Fibonacci(n - 2);
+        }
+
+        /*public string ChangeA(string str)
+        {
+            
+
+            if (str == "")
+                return "";
+
+            if (str.Substring(1) == "a")
+            {
+                return "-" + ChangeA(str.Substring(str.Length - 1));
+            }
+
+            return ChangeA(str.Substring(0, str.Length - 1));
+        }*/
+
+        public int Triangle(int n)
+        {
+            if (n == 0)
+                return 0;
+
+            return Triangle(n - 1);
         }
     }
 
@@ -48,6 +69,8 @@ namespace encapsulation
             Console.WriteLine(d);
             int e = f.Fibonacci(6); //8
             Console.WriteLine(e);
+            string test = f.ChangeA("arial");
+            Console.WriteLine(test);
         }
     }
 }
