@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
@@ -30,20 +31,20 @@ namespace encapsulation
             return Fibonacci(n - 1) + Fibonacci(n - 2);
         }
 
-        /*public string ChangeA(string str)
+        public string ChangeA(string str)
         {
             
 
-            if (str == "")
+            if (str.Length < 1)
                 return "";
 
-            if (str.Substring(1) == "a")
+            if (str[0] == 'a')
             {
-                return "-" + ChangeA(str.Substring(str.Length - 1));
+                return "-" + ChangeA(str.Substring(1));
             }
 
-            return ChangeA(str.Substring(0, str.Length - 1));
-        }*/
+            return str[0] + ChangeA(str.Substring(1));
+        }
 
         public int Triangle(int n)
         {
@@ -69,7 +70,7 @@ namespace encapsulation
             Console.WriteLine(d);
             int e = f.Fibonacci(6); //8
             Console.WriteLine(e);
-            string test = f.ChangeA("arial");
+            string test = f.ChangeA("arial"); //-ri-l
             Console.WriteLine(test);
         }
     }
