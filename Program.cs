@@ -46,12 +46,34 @@ namespace encapsulation
             return str[0] + ChangeA(str.Substring(1));
         }
 
-        public int Triangle(int n)
+        public static int Triangle(int n)
         {
             if (n == 0)
                 return 0;
 
-            return Triangle(n - 1);
+            return n + Triangle(n - 1);
+        }
+
+        public static int CountNegative(int[] nums)
+        {
+            int count = 0;
+            foreach (int n in nums)
+            {
+                if (n < 0)
+                    count += 1;
+            }
+            return count;
+        }
+
+        public static int[] ConcatArray(int[] a, int[] b)
+        {
+            int newLength = a.Length + b.Length;
+            int[] newArr = new int[newLength];
+            int i = 0
+            for (; i < newArr.Length; i++)
+                newArr[i] = b[i - b.Length];
+
+            return newArr;
         }
     }
 
