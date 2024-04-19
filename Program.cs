@@ -65,16 +65,16 @@ namespace encapsulation
             return count;
         }
 
-        public static int[] ConcatArray(int[] a, int[] b)
+        /*public static int[] ConcatArray(int[] a, int[] b)
         {
             int newLength = a.Length + b.Length;
             int[] newArr = new int[newLength];
-            int i = 0
-            for (; i < newArr.Length; i++)
-                newArr[i] = b[i - b.Length];
+            int i = 0;
+            for (int i = 0; i < newArr.Length; i++, cursor++)
+                newArr[cursor] = b[i - b.Length];
 
             return newArr;
-        }
+        }*/
     }
 
     internal class Program
