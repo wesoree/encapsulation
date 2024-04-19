@@ -12,3 +12,10 @@ C:\Users\Wesley Lo\source\repos\encapsulation\obj\Debug\encapsulation.csproj.Ass
 C:\Users\Wesley Lo\source\repos\encapsulation\obj\Debug\encapsulation.csproj.CoreCompileInputs.cache
 C:\Users\Wesley Lo\source\repos\encapsulation\obj\Debug\encapsulation.exe
 C:\Users\Wesley Lo\source\repos\encapsulation\obj\Debug\encapsulation.pdb
+C:\Users\LoW8365\Documents\GitHub\encapsulation\bin\Debug\encapsulation.exe.config
+C:\Users\LoW8365\Documents\GitHub\encapsulation\bin\Debug\encapsulation.exe
+C:\Users\LoW8365\Documents\GitHub\encapsulation\bin\Debug\encapsulation.pdb
+C:\Users\LoW8365\Documents\GitHub\encapsulation\obj\Debug\encapsulation.csproj.AssemblyReference.cache
+C:\Users\LoW8365\Documents\GitHub\encapsulation\obj\Debug\encapsulation.csproj.CoreCompileInputs.cache
+C:\Users\LoW8365\Documents\GitHub\encapsulation\obj\Debug\encapsulation.exe
+C:\Users\LoW8365\Documents\GitHub\encapsulation\obj\Debug\encapsulation.pdb
