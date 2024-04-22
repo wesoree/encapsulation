@@ -107,8 +107,8 @@ namespace encapsulation
             Console.WriteLine(e);
             string test = f.ChangeA("arial"); //-ri-l
             Console.WriteLine(test);
-            int[] g = f.ConcatArray([1, 2, 3], [4, 5, 6]);
-            Console.WriteLine(g);
+            //int[] g = f.ConcatArray([1, 2, 3], [4, 5, 6]);
+            //Console.WriteLine(g);
         }
     }
 }
