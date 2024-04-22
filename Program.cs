@@ -65,15 +65,34 @@ namespace encapsulation
             return count;
         }
 
-        /*public static int[] ConcatArray(int[] a, int[] b)
+        public static int[] ConcatArray(int[] a, int[] b)
         {
             int newLength = a.Length + b.Length;
             int[] newArr = new int[newLength];
-            int i = 0;
+            int cursor = 0;
             for (int i = 0; i < newArr.Length; i++, cursor++)
                 newArr[cursor] = b[i - b.Length];
 
             return newArr;
+        }
+
+        /*
+    1. Recursively convert all letter 'a' to a hyphen '-'
+    2. Trace the call stack for Triangle(4)
+    3. Given an array of ints, create a STATIC method
+       to count all numbers lower than 0
+    pre 4. Create a method to contenate two arrays.
+    4. Create a method called ConcatPositive that will take two arrays
+       and concatenate them together with only the positive numbers.
+       No extra space in the array.
+    */
+
+        /*public static int Triangle(int n)
+        {
+            if (n == 0)
+                return 0;
+
+            return n + Triangle(n - 1);
         }*/
     }
 
@@ -94,6 +113,8 @@ namespace encapsulation
             Console.WriteLine(e);
             string test = f.ChangeA("arial"); //-ri-l
             Console.WriteLine(test);
+            // int[] re = f.ConcatArray([1, 3, 5], [2, 4, 6]);
+            // Console.WriteLine(re);
         }
     }
 }
