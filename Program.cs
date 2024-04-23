@@ -88,11 +88,22 @@ namespace encapsulation
 
             return n + Triangle(n - 1);
         }
+
+        public int Array11(int[] nums, int index)
+        {
+            if (index == nums.Length)
+                return 0;
+
+            if (nums[index] == 11)
+                return 1 + Array11(nums, index + 1);
+
+            return Array11(nums, index + 1);
+        }
     }
 
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Factorial f = new Factorial();
             int a = f.Fibonacci(0); //0
@@ -109,6 +120,8 @@ namespace encapsulation
             Console.WriteLine(test);
             //int[] g = f.ConcatArray([1, 2, 3], [4, 5, 6]);
             //Console.WriteLine(g);
+            int g = f.Array11([3, 11, 20, 11, 30], 0);
+            Console.WriteLine(g);
         }
     }
 }
