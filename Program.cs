@@ -101,6 +101,21 @@ namespace encapsulation
         }
     }
 
+    class IntegerArrayList
+    {
+        private int[] _nums;
+
+        public IntegerArrayList(int[] nums)
+        {
+            this._nums = nums;
+        }
+
+        public string ToString()
+        {
+            return string.Join(" ,", _nums);
+        }
+    }
+
     internal class Program
     {
         public static void Main(string[] args)
@@ -122,6 +137,8 @@ namespace encapsulation
             //Console.WriteLine(g);
             //int g = f.Array11([3, 11, 20, 11, 30], 0);
             //Console.WriteLine(g);
+            IntegerArrayList list = new IntegerArrayList([1, 3, 5, 3]);
+            Console.WriteLine(list.ToString());
         }
     }
 }
