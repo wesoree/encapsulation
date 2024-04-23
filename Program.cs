@@ -120,8 +120,8 @@ namespace encapsulation
             Console.WriteLine(test);
             //int[] g = f.ConcatArray([1, 2, 3], [4, 5, 6]);
             //Console.WriteLine(g);
-            int g = f.Array11([3, 11, 20, 11, 30], 0);
-            Console.WriteLine(g);
+            //int g = f.Array11([3, 11, 20, 11, 30], 0);
+            //Console.WriteLine(g);
         }
     }
 }
