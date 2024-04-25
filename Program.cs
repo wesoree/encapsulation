@@ -147,8 +147,6 @@ namespace encapsulation
             {
                 Console.Write(pointer.Value);
                 pointer = pointer.Next;
-
-                return 
             }
         }
         
@@ -208,6 +206,9 @@ namespace encapsulation
 
             list.Concat(list2);
             list.PrintAll();
+
+            list.Get(3);
+            list.Get(12);
 
         }
     }
