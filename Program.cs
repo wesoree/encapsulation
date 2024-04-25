@@ -161,14 +161,13 @@ namespace encapsulation
         public int Get(int index)
         {
             Node pointer = this._start;
-            for (int i, i < index; i++)
+            for (int i = 0; i < index; i++)
             {
                 if (pointer == null)
                     throw new IndexOutOfRangeException();
                 pointer = pointer.Next;
             }
-
-        return pointer.Value;
+            return pointer.Value;
         }
 
         /*public IntegerArrayList Slice(int start, int end)
