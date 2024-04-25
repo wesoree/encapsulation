@@ -145,7 +145,7 @@ namespace encapsulation
             Node pointer = this._start;
             while (pointer != null)
             {
-                Console.Write(pointer.Value);
+                Console.Write(pointer.Value + ", ");
                 pointer = pointer.Next;
             }
         }
@@ -207,8 +207,8 @@ namespace encapsulation
             list.Concat(list2);
             list.PrintAll();
 
-            list.Get(3);
-            list.Get(12);
+            Console.WriteLine(list2.Get(0));
+            Console.WriteLine(list2.Get(5));
 
         }
     }
