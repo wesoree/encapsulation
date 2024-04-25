@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LoW8365\\Documents\\GitHub\\encapsulation\\",
+  "WorkspaceRootPath": "C:\\Users\\low8365\\source\\repos\\wesoree\\encapsulation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9014442-740C-497B-AB3B-538D6CA298E2}|encapsulation.csproj|c:\\users\\low8365\\documents\\github\\encapsulation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9014442-740C-497B-AB3B-538D6CA298E2}|encapsulation.csproj|c:\\users\\low8365\\source\\repos\\wesoree\\encapsulation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9014442-740C-497B-AB3B-538D6CA298E2}|encapsulation.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,24 +18,20 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\LoW8365\\Documents\\GitHub\\encapsulation\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\low8365\\source\\repos\\wesoree\\encapsulation\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\LoW8365\\Documents\\GitHub\\encapsulation\\Program.cs",
+              "ToolTip": "C:\\Users\\low8365\\source\\repos\\wesoree\\encapsulation\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAGQAAAAAAAAAAAAqwGkAAAAPAAAA",
+              "ViewState": "AQIAAJsAAAAAAAAAAAD4v6YAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-05T18:24:04.253Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

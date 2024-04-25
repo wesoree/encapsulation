@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace encapsulation
@@ -101,18 +103,77 @@ namespace encapsulation
         }
     }
 
-    class IntegerArrayList
+    public class IntegerArrayList
     {
-        private int[] _nums;
-
-        public IntegerArrayList(int[] nums)
+        public class Node
         {
-            this._nums = nums;
+            public int Value;
+            public Node Next;
+
+            public Node(int n)
+            {
+                this.Value = n;
+            }
+
+        }
+        
+        private Node _start;
+        private Node _end;
+
+        public IntegerArrayList()
+        {
+            this._start = null;
+            this._end = null;
+        }
+        
+        public void Add(int n)
+        {
+            Node node = new Node(n);
+            if (this._start == null) 
+            {
+                this._start = node;
+                this._end = node;
+            }
+            else
+            {
+                this._end.Next = node;
+            }
+        }
+        
+        public void PrintAll()
+        {
+            Node pointer = this._start;
+            while (pointer != null)
+            {
+                Console.Write(pointer.Value);
+                pointer = pointer.Next;
+
+                return 
+            }
+        }
+        
+        public void Concat(IntegerArrayList other)
+        {
+            this._end.Next = other._start;
+            this._start = other._end;
         }
 
-        public string ToString()
+        public int Get(int index)
         {
-            return string.Join(" ,", _nums);
+            Node pointer = this._start;
+            for (int i, i < index; i++)
+            {
+                if (pointer == null)
+                    throw new IndexOutOfRangeException();
+                pointer = pointer.Next;
+            }
+
+        return pointer.Value;
+        }
+
+        public IntegerArrayList Slice(int start, int end)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -137,8 +198,18 @@ namespace encapsulation
             //Console.WriteLine(g);
             //int g = f.Array11([3, 11, 20, 11, 30], 0);
             //Console.WriteLine(g);
-            IntegerArrayList list = new IntegerArrayList([1, 3, 5, 3]);
-            Console.WriteLine(list.ToString());
+            IntegerArrayList list = new IntegerArrayList();
+            list.Add(3);
+            list.Add(4);
+            list.Add(5);
+            IntegerArrayList list2 = new IntegerArrayList();
+            list2.Add(6);
+            list2.Add(35);
+            list2.Add(59);
+
+            list.Concat(list2);
+            list.PrintAll();
+
         }
     }
 }
