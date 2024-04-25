@@ -171,10 +171,10 @@ namespace encapsulation
         return pointer.Value;
         }
 
-        public IntegerArrayList Slice(int start, int end)
+        /*public IntegerArrayList Slice(int start, int end)
         {
             throw new NotImplementedException();
-        }
+        }*/
     }
 
     internal class Program
