@@ -168,9 +168,14 @@ namespace encapsulation
             return pointer.Value;
         }
 
-        /*public IntegerArrayList Slice(int start, int end)
+        /* public void Slice(int i)
         {
-            throw new NotImplementedException();
+            IntegerLinkedList split = new IntegerLinkedList();
+            split._end = this._end;
+            for (int j = 0; j < i; j++)
+            {
+                
+            }
         }*/
     }
 
