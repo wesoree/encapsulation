@@ -207,8 +207,8 @@ namespace encapsulation
             list.Concat(list2);
             list.PrintAll();
 
-            Console.WriteLine(list2.Get(0));
-            Console.WriteLine(list2.Get(5));
+            // Console.WriteLine(list2.Get(0));
+            // Console.WriteLine(list2.Get(2));
 
         }
     }
