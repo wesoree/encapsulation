@@ -103,7 +103,7 @@ namespace encapsulation
         }
     }
 
-    public class IntegerArrayList
+    public class IntegerLinkedList
     {
         public class Node
         {
@@ -120,7 +120,7 @@ namespace encapsulation
         private Node _start;
         private Node _end;
 
-        public IntegerArrayList()
+        public IntegerLinkedList()
         {
             this._start = null;
             this._end = null;
@@ -150,7 +150,7 @@ namespace encapsulation
             }
         }
         
-        public void Concat(IntegerArrayList other)
+        public void Concat(IntegerLinkedList other)
         {
             this._end.Next = other._start;
             this._start = other._end;
@@ -195,11 +195,11 @@ namespace encapsulation
             //Console.WriteLine(g);
             //int g = f.Array11([3, 11, 20, 11, 30], 0);
             //Console.WriteLine(g);
-            IntegerArrayList list = new IntegerArrayList();
+            IntegerLinkedList list = new IntegerLinkedList();
             list.Add(3);
             list.Add(4);
             list.Add(5);
-            IntegerArrayList list2 = new IntegerArrayList();
+            IntegerLinkedList list2 = new IntegerLinkedList();
             list2.Add(6);
             list2.Add(35);
             list2.Add(59);
