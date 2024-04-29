@@ -36,8 +36,6 @@ namespace encapsulation
 
         public string ChangeA(string str)
         {
-
-
             if (str.Length < 1)
                 return "";
 
@@ -49,6 +47,16 @@ namespace encapsulation
             return str[0] + ChangeA(str.Substring(1));
         }
 
+        public int CountX(string str)
+        {
+            if (str.Length < 1)
+                return 0;
+
+            if (str[0] == 'x')
+                return 1 + CountX(str.Substring(1));
+
+            return 0 + CountX(str.Substring(1));
+        }
 
         public static int CountNegative(int[] nums)
         {
@@ -101,6 +109,8 @@ namespace encapsulation
 
             return Array11(nums, index + 1);
         }
+
+        
     }
 
     public class IntegerLinkedList
@@ -179,6 +189,25 @@ namespace encapsulation
         }*/
     }
 
+    public class IntegerArrayList
+    {
+        private int[] _nums;
+        private int _nextIndex = 0;
+
+        public IntegerArrayList()
+        {
+            this._nums = new int[5];
+        }
+
+        public void Add(int n)
+        {
+            this._nums[this._nextIndex] = n;
+            this._nextIndex += 1;
+        }
+    }
+
+
+
     internal class Program
     {
         public static void Main(string[] args)
@@ -218,6 +247,11 @@ namespace encapsulation
             // Console.WriteLine(list2.Get(2));
 
             // list.Split(3)
+            Console.WriteLine("--");
+
+            Console.WriteLine(f.CountX("hi")); //0
+            Console.WriteLine(f.CountX("xhix")); //2
+            Console.WriteLine(f.CountX("xxhixx")); //4
 
 
         }
