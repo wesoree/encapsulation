@@ -153,11 +153,13 @@ namespace encapsulation
         public void PrintAll()
         {
             Node pointer = this._start;
+            
             while (pointer != null)
             {
                 Console.Write(pointer.Value + ", ");
                 pointer = pointer.Next;
             }
+            Console.WriteLine();
         }
         
         public void Concat(IntegerLinkedList other)
@@ -246,9 +248,7 @@ namespace encapsulation
             // Console.WriteLine(list2.Get(0));
             // Console.WriteLine(list2.Get(2));
 
-            // list.Split(3)
-            Console.WriteLine("--");
-
+            // list.Split(3);
             Console.WriteLine(f.CountX("hi")); //0
             Console.WriteLine(f.CountX("xhix")); //2
             Console.WriteLine(f.CountX("xxhixx")); //4
