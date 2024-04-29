@@ -240,8 +240,8 @@ namespace encapsulation
             list2.Add(35);
             list2.Add(59);
 
-            //list.Concat(list2);
-            //list.PrintAll();
+            list.Concat(list2);
+            list.PrintAll();
 
             // Console.WriteLine(list2.Get(0));
             // Console.WriteLine(list2.Get(2));
