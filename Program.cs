@@ -269,7 +269,7 @@ namespace encapsulation
             l.Add(4);
             l.Add(5);
             l.Add(6);
-            //Console.WriteLine(l.PrintAll());
+            Console.WriteLine(l.PrintAll());
         }
     }
 }
