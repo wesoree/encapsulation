@@ -49,6 +49,8 @@ namespace encapsulation
 
         public int CountX(string str)
         {
+            str = str.ToLower();
+            
             if (str.Length < 1)
                 return 0;
 
@@ -252,7 +254,8 @@ namespace encapsulation
             Console.WriteLine(f.CountX("hi")); //0
             Console.WriteLine(f.CountX("xhix")); //2
             Console.WriteLine(f.CountX("xxhixx")); //4
-
+            Console.WriteLine(f.CountX("XXHIXX"));
+            Console.WriteLine(f.CountX(""));
 
         }
     }
