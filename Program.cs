@@ -21,13 +21,6 @@ namespace encapsulation
          * 2, 3, 5, 8, 13, 21 and so on. Define a recursive fibonacci(n) method that returns the nth
          * fibonacci number, with n=0 representing the start of the sequence.
          */
-
-        
-
-        
-
-        
-
         public static int CountNegative(int[] nums)
         {
             int count = 0;
@@ -276,7 +269,7 @@ namespace encapsulation
             l.Add(4);
             l.Add(5);
             l.Add(6);
-            Console.WriteLine(l.PrintAll());
+            //Console.WriteLine(l.PrintAll());
         }
     }
 }
