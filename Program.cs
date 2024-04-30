@@ -194,6 +194,15 @@ namespace encapsulation
 
         public void Add(int n)
         {
+            if (this._nextIndex == this._nums.Length)
+            {
+                int[] newArr = new int[this._nums.Length + 5];
+                for (int i = 0; i < this._nextIndex; i+= 1)
+                {
+                    newArr[i] = this._nums[i];
+                }
+                this._nums = newArr;
+            }
             this._nums[this._nextIndex] = n;
             this._nextIndex += 1;
         }
