@@ -22,30 +22,9 @@ namespace encapsulation
          * fibonacci number, with n=0 representing the start of the sequence.
          */
 
-        public int Fibonacci(int n)
-        {
-            if (n == 0)
-                return 0;
+        
 
-            if (n == 1)
-                return 1;
-
-
-            return Fibonacci(n - 1) + Fibonacci(n - 2);
-        }
-
-        public string ChangeA(string str)
-        {
-            if (str.Length < 1)
-                return "";
-
-            if (str[0] == 'a')
-            {
-                return "-" + ChangeA(str.Substring(1));
-            }
-
-            return str[0] + ChangeA(str.Substring(1));
-        }
+        
 
         
 
@@ -82,13 +61,7 @@ namespace encapsulation
         }
 
 
-        public static int Triangle(int n)
-        {
-            if (n == 0)
-                return 0;
-
-            return n + Triangle(n - 1);
-        }
+        
 
         public int Array11(int[] nums, int index)
         {
@@ -206,6 +179,11 @@ namespace encapsulation
             this._nums[this._nextIndex] = n;
             this._nextIndex += 1;
         }
+
+        public int[] PrintAll()
+        {
+            return this._nums;
+        }
     }
 
 
@@ -224,21 +202,44 @@ namespace encapsulation
 
             return 0 + CountX(str.Substring(1));
         }
+        public static int Triangle(int n)
+        {
+            if (n == 0)
+                return 0;
+
+            return n + Triangle(n - 1);
+        }
+        public static int Fibonacci(int n)
+        {
+            if (n == 0)
+                return 0;
+
+            if (n == 1)
+                return 1;
+
+
+            return Fibonacci(n - 1) + Fibonacci(n - 2);
+        }
+        public static string ChangeA(string str)
+        {
+            if (str.Length < 1)
+                return "";
+
+            if (str[0] == 'a')
+            {
+                return "-" + ChangeA(str.Substring(1));
+            }
+
+            return str[0] + ChangeA(str.Substring(1));
+        }
         public static void Main(string[] args)
         {
-            Factorial f = new Factorial();
-            int a = f.Fibonacci(0); //0
-            Console.WriteLine(a);
-            int b = f.Fibonacci(1); //1
-            Console.WriteLine(b);
-            int c = f.Fibonacci(2); //1
-            Console.WriteLine(c);
-            int d = f.Fibonacci(3); //2
-            Console.WriteLine(d);
-            int e = f.Fibonacci(6); //8
-            Console.WriteLine(e);
-            string test = f.ChangeA("arial"); //-ri-l
-            Console.WriteLine(test);
+            Console.WriteLine(Fibonacci(0)); //0
+            Console.WriteLine(Fibonacci(1)); //1
+            Console.WriteLine(Fibonacci(2)); //1
+            Console.WriteLine(Fibonacci(3)); //2
+            Console.WriteLine(Fibonacci(6)); //8
+            Console.WriteLine(ChangeA("arial")); //-ri-l
             //int[] g = f.ConcatArray([1, 2, 3], [4, 5, 6]);
             //Console.WriteLine(g);
             //int g = f.Array11([3, 11, 20, 11, 30], 0);
@@ -267,6 +268,15 @@ namespace encapsulation
             Console.WriteLine(CountX("XXHIXX"));
             Console.WriteLine(CountX(""));
 
+
+            IntegerArrayList l = new IntegerArrayList();
+            l.Add(1);
+            l.Add(2);
+            l.Add(3);
+            l.Add(4);
+            l.Add(5);
+            l.Add(6);
+            Console.WriteLine(l.PrintAll());
         }
     }
 }
