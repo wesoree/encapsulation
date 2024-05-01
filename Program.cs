@@ -13,49 +13,6 @@ namespace encapsulation
 {
     class Factorial
     {
-
-        /*
-         * The fibonacci sequence is a famous bit of mathematics, and it happens to have a recursive
-         * definition. The first two values in the sequence are 0 and 1 (essentially 2 base cases). Each
-         * subsequent value is the sum of the previous two values, so the whole sequence is: 0, 1, 1,
-         * 2, 3, 5, 8, 13, 21 and so on. Define a recursive fibonacci(n) method that returns the nth
-         * fibonacci number, with n=0 representing the start of the sequence.
-         */
-        public static int CountNegative(int[] nums)
-        {
-            int count = 0;
-            foreach (int n in nums)
-            {
-                if (n < 0)
-                    count += 1;
-            }
-            return count;
-        }
-
-        public static int[] ConcatArray(int[] a, int[] b)
-        {
-            int newLength = a.Length + b.Length;
-            int[] newArr = new int[newLength];
-            int cursor = 0;
-
-            for (int i = 0; i < a.Length; i++)
-            {
-                newArr[cursor] = a[i];
-                cursor++;
-            }
-
-            for (int i = 0; i < b.Length; i++)
-            {
-                newArr[cursor] = b[i];
-                cursor++;
-            }
-
-            return newArr;
-        }
-
-
-        
-
         public int Array11(int[] nums, int index)
         {
             if (index == nums.Length)
@@ -66,8 +23,6 @@ namespace encapsulation
 
             return Array11(nums, index + 1);
         }
-
-        
     }
 
     public class IntegerLinkedList
@@ -137,7 +92,12 @@ namespace encapsulation
             return pointer.Value;
         }
 
-        /* public void Slice(int i)
+        public void Copy()
+        {
+            
+        }
+
+        /* public void Slice(int begin, int end)
         {
             IntegerLinkedList split = new IntegerLinkedList();
             split._end = this._end;
@@ -225,6 +185,37 @@ namespace encapsulation
 
             return str[0] + ChangeA(str.Substring(1));
         }
+        public static int[] ConcatArray(int[] a, int[] b)
+        {
+            int newLength = a.Length + b.Length;
+            int[] newArr = new int[newLength];
+            int cursor = 0;
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                newArr[cursor] = a[i];
+                cursor++;
+            }
+
+            for (int i = 0; i < b.Length; i++)
+            {
+                newArr[cursor] = b[i];
+                cursor++;
+            }
+
+            return newArr;
+        }
+        public int CountNegative(int[] nums)
+        {
+            int count = 0;
+            foreach (int n in nums)
+            {
+                if (n < 0)
+                    count += 1;
+            }
+            return count;
+        }
+
         public static void Main(string[] args)
         {
             Console.WriteLine(Fibonacci(0)); //0
@@ -233,10 +224,7 @@ namespace encapsulation
             Console.WriteLine(Fibonacci(3)); //2
             Console.WriteLine(Fibonacci(6)); //8
             Console.WriteLine(ChangeA("arial")); //-ri-l
-            //int[] g = f.ConcatArray([1, 2, 3], [4, 5, 6]);
-            //Console.WriteLine(g);
-            //int g = f.Array11([3, 11, 20, 11, 30], 0);
-            //Console.WriteLine(g);
+            // Console.WriteLine(ConcatArray([1, 2, 3], [4, 5, 6]));
             IntegerLinkedList list = new IntegerLinkedList();
             list.Add(3);
             list.Add(4);
