@@ -133,9 +133,15 @@ namespace encapsulation
             this._nextIndex += 1;
         }
 
-        public int[] PrintAll()
+        public void PrintAll()
         {
-            return this._nums;
+            Console.Write("[");
+
+            for (int i = 0; i < this._nums.Length; i += 1) 
+            {
+                Console.Write(this._nums[i] + ", ");
+            }
+            Console.WriteLine("]");
         }
     }
 
@@ -257,7 +263,11 @@ namespace encapsulation
             l.Add(4);
             l.Add(5);
             l.Add(6);
-            //Console.WriteLine(l.PrintAll());
+            l.Add(7);
+            l.Add(8);
+            l.Add(9);
+            l.Add(10);
+            l.PrintAll();
         }
     }
 }
