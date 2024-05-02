@@ -220,6 +220,28 @@ namespace encapsulation
             return count;
         }
 
+        public static int LinearSearch(int[] nums, int target)
+        {
+            for (int i = 0;i < nums.Length;i += 1)
+            {
+                int value = nums[i];
+                if (value == target)
+                    return i;
+            }
+            return -1;
+        }
+        
+        public static int CountMult7(int n)
+        {
+            if (n == 0)
+                return 1;
+
+            if (n % 7 == 0)
+                return 1 + CountMult7(n - 1);
+
+            return CountMult7(n - 1);
+        }
+
         public static void Main(string[] args)
         {
             Console.WriteLine(Fibonacci(0)); //0
