@@ -145,8 +145,6 @@ namespace encapsulation
         }
     }
 
-
-
     internal class Program
     {
         public static int CountX(string str)
