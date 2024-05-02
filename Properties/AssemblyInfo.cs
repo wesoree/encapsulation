@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("encapsulation")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("WesEgg corp")]
+[assembly: AssemblyCompany("WesEgg Interactive")]
 [assembly: AssemblyProduct("encapsulation")]
-[assembly: AssemblyCopyright("Copyright © WesEgg 2024")]
+[assembly: AssemblyCopyright("Copyright © WesEgg Interactive 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
