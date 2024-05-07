@@ -241,6 +241,21 @@ namespace encapsulation
 
             return CountMult7(n - 1);
         }
+        public static void BubbleSort(int[] nums)
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = i; j < nums.Length; j++)
+                {
+                    if (nums[i] > nums[j])
+                    {
+                        int temp = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = temp;
+                    }
+                }
+            }
+        }
 
         public static int[] Sort(int[] nums)
         {
@@ -286,7 +301,11 @@ namespace encapsulation
             Console.WriteLine(Fibonacci(3)); //2
             Console.WriteLine(Fibonacci(6)); //8
             Console.WriteLine(ChangeA("arial")); //-ri-l
-            // Console.WriteLine(ConcatArray([1, 2, 3], [4, 5, 6]));
+            int[] a = {1, 2, 3};
+            int[] b = {4, 5, 6};
+            int[] c = ConcatArray(a, b);
+            string str = c.ToString();
+            Console.WriteLine(str);
             IntegerLinkedList list = new IntegerLinkedList();
             list.Add(3);
             list.Add(4);
