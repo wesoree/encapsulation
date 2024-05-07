@@ -242,8 +242,27 @@ namespace encapsulation
             return CountMult7(n - 1);
         }
 
+        public static int[] Sort(int[] nums)
+        {
+            int n = nums.Length;
+            for (int i = 0; i < n ; i++)
+            {
+                int minIndex = i;
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (nums[j] < nums[minIndex])
+                        minIndex = j;
+                }
+                int temp = nums[i];
+                nums[i] = nums[minIndex];
+                nums[minIndex] = temp;
+            }
+            return nums;
+        }
+
         public static int BinarySearch(int[] nums, int key)
         {
+            nums = Sort(nums);
             int min = 0;
             int max = nums.Length - 1;
             while (min <= max)
