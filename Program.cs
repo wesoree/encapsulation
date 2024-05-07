@@ -269,7 +269,6 @@ namespace encapsulation
             {
                 int mid = (min + max) >> 1;
                 if (key == nums[mid])
-
                     return ++mid;
                 else if (key < nums[mid])
                     max = mid - 1;
