@@ -242,6 +242,24 @@ namespace encapsulation
             return CountMult7(n - 1);
         }
 
+        public static int BinarySearch(int[] nums, int key)
+        {
+            int min = 0;
+            int max = nums.Length - 1;
+            while (min <= max)
+            {
+                int mid = (min + max) >> 1;
+                if (key == nums[mid])
+
+                    return ++mid;
+                else if (key < nums[mid])
+                    max = mid - 1;
+                else
+                    min = mid + 1;
+            }
+            return -1;
+        }
+
         public static void Main(string[] args)
         {
             Console.WriteLine(Fibonacci(0)); //0
