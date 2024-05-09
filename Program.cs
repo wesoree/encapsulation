@@ -241,51 +241,79 @@ namespace encapsulation
 
             return CountMult7(n - 1);
         }
-        public static void BubbleSort(int[] nums)
+
+        public static void SelectionSort(int[] arr)
         {
-            for (int i = 0; i < nums.Length; i++)
+            for (int i = 0; i < arr.Length - 1; i++)
             {
-                for (int j = i; j < nums.Length; j++)
+                int minElementIndex = i;
+                for (int j = i + 1; j < arr.Length; j++)
                 {
-                    if (nums[i] > nums[j])
-                    {
-                        int temp = nums[i];
-                        nums[i] = nums[j];
-                        nums[j] = temp;
-                    }
+                    if (arr[minElementIndex] > arr[j])
+                        minElementIndex = j;
                 }
+                if (minElementIndex != i)
+                    Swap(arr, i, minElementIndex);
             }
         }
 
-        public static int[] Sort(int[] nums)
+        static void Swap(int[] arr, int i, int j)
         {
-            int n = nums.Length;
-            for (int i = 0; i < n ; i++)
-            {
-                int minIndex = i;
-                for (int j = i + 1; j < n; j++)
-                {
-                    if (nums[j] < nums[minIndex])
-                        minIndex = j;
-                }
-                int temp = nums[i];
-                nums[i] = nums[minIndex];
-                nums[minIndex] = temp;
-            }
-            return nums;
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
         }
 
-        public static int BinarySearch(int[] nums, int key)
+        public static void Sort(int[] arr)
         {
-            nums = Sort(nums);
+            if (arr.Length < 2)
+                return; // no need to sort
+            int mid = arr.Length / 2;
+            int[] left = new int[mid];
+            int[] right = new int[arr.Length - mid];
+            for (int i = 0; i < mid; i++)
+                left[i] = arr[i];
+            for (int i = 0; i < arr.Length - mid; i++)
+                right[i] = arr[mid + i];
+            Sort(left);
+            Sort(right);
+            Merge(left, right, arr);
+        }
+
+        private static void Merge(int[] a, int[] b, int[] all)
+        {
+            int i = 0, j = 0, k = 0;
+            while ((i < a.Length) && (j < b.Length))
+            {
+                if (a[i] < b[j])
+                {
+                    all[k] = a[i];
+                    i++;
+                }
+                else
+                {
+                    all[k] = b[j];
+                    j++;
+                }
+                k++;
+            }
+            while (i < a.Length)
+                all[k++] = a[i++];
+            while (j < b.Length)
+                all[k++] = b[j++];
+        }
+
+
+        public static int BinarySearch(int[] arr, int key)
+        {
             int min = 0;
-            int max = nums.Length - 1;
+            int max = arr.Length - 1;
             while (min <= max)
             {
                 int mid = (min + max) >> 1;
-                if (key == nums[mid])
+                if (key == arr[mid])
                     return ++mid;
-                else if (key < nums[mid])
+                else if (key < arr[mid])
                     max = mid - 1;
                 else
                     min = mid + 1;
@@ -293,9 +321,39 @@ namespace encapsulation
             return -1;
         }
 
+        public static void search(int[] arr, int key)
+        {
+            if (arr.Length == 1)
+            {
+                if (arr[0] == key)
+                {
+                    Console.WriteLine("there is an instance of " + key + " in " + arr.ToString());
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("there are no instances of " + key);
+                    return;
+                }
+            }
+            Console.WriteLine("the unsorted array is:");
+            Console.WriteLine(arr.ToString());
+            Console.WriteLine("the sorted array is:");
+            if (arr.Length <= 10)
+                SelectionSort(arr);
+            else
+                Sort(arr);
+            Console.WriteLine(arr.ToString());
+            int a = BinarySearch(arr, key);
+            if (a == -1)
+                Console.WriteLine("there are no instances of " + key);
+            else
+                Console.WriteLine("the last instance of " + key + " is located on spot " + a);
+        }
+
         public static void Main(string[] args)
         {
-            Console.WriteLine(Fibonacci(0)); //0
+            /*Console.WriteLine(Fibonacci(0)); //0
             Console.WriteLine(Fibonacci(1)); //1
             Console.WriteLine(Fibonacci(2)); //1
             Console.WriteLine(Fibonacci(3)); //2
@@ -343,6 +401,8 @@ namespace encapsulation
             l.Add(9);
             l.Add(10);
             l.PrintAll();
+            */
+
 
 
         }
