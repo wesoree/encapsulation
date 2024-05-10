@@ -353,7 +353,7 @@ namespace encapsulation
                 Console.WriteLine("the array is " + arr[0]);
                 if (arr[0] == key)
                 {
-                    Console.WriteLine(key + " located at index 0");
+                    Console.WriteLine(key + " found at index 0");
                     return;
                 }
                 else
@@ -374,7 +374,7 @@ namespace encapsulation
             if (a == -1)
                 Console.WriteLine(key + " was not found");
             else
-                Console.WriteLine(key + " located at index "  + a);
+                Console.WriteLine(key + " found at index "  + a);
         }
 
         public static void Main(string[] args)
@@ -385,11 +385,12 @@ namespace encapsulation
             Console.WriteLine(Fibonacci(3)); //2
             Console.WriteLine(Fibonacci(6)); //8
             Console.WriteLine(ChangeA("arial")); //-ri-l
-            int[] a = {1, 2, 3};
-            int[] b = {4, 5, 6};
-            int[] c = ConcatArray(a, b);
-            string str = c.ToString();
-            Console.WriteLine(str);
+            
+            int[] testape = {1, 2, 3};
+            int[] test = {4, 5, 6};
+            int[] result = ConcatArray(testape, test);
+            
+            Console.WriteLine(AToString(result)); /*
             IntegerLinkedList list = new IntegerLinkedList();
             list.Add(3);
             list.Add(4);
