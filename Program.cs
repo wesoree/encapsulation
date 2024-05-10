@@ -59,6 +59,7 @@ namespace encapsulation
             else
             {
                 this._end.Next = node;
+                this._end = node;
             }
         }
         
@@ -72,6 +73,20 @@ namespace encapsulation
                 pointer = pointer.Next;
             }
             Console.WriteLine();
+        }
+
+        public string LinkString()
+        {
+            Node pointer = this._start;
+
+            string str = "";
+
+            while (pointer != null)
+            {
+                str += pointer.Value.ToString() + " ";    
+                pointer = pointer.Next;
+            }
+            return str;
         }
         
         public void Concat(IntegerLinkedList other)
@@ -321,10 +336,14 @@ namespace encapsulation
             return -1;
         }
 
-        public static string AToString(int[] arr)
+        public static string AToString(int[] nums)
         {
-            string str = string.Concat(arr.Select(x => x.ToString()));
-            return str;
+            IntegerLinkedList arr = new IntegerLinkedList();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                arr.Add(nums[i]);
+            }
+            return arr.LinkString();
         }
 
         public static void Search(int[] arr, int key)
