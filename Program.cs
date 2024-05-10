@@ -327,7 +327,7 @@ namespace encapsulation
             {
                 int mid = (min + max) >> 1;
                 if (key == arr[mid])
-                    return ++mid;
+                    return mid;
                 else if (key < arr[mid])
                     max = mid - 1;
                 else
@@ -350,14 +350,15 @@ namespace encapsulation
         {
             if (arr.Length == 1)
             {
+                Console.WriteLine("the array is " + arr[0]);
                 if (arr[0] == key)
                 {
-                    Console.WriteLine("there is an instance of " + key + " in " + AToString(arr));
+                    Console.WriteLine(key + " located at index 0");
                     return;
                 }
                 else
                 {
-                    Console.WriteLine("there are no instances of " + key);
+                    Console.WriteLine(key +" was not found");
                     return;
                 }
             }
@@ -371,9 +372,9 @@ namespace encapsulation
             Console.WriteLine(AToString(arr));
             int a = BinarySearch(arr, key);
             if (a == -1)
-                Console.WriteLine("there are no instances of " + key);
+                Console.WriteLine(key + " was not found");
             else
-                Console.WriteLine("the last instance of " + key + " is located on spot " + a);
+                Console.WriteLine(key + " located at index "  + a);
         }
 
         public static void Main(string[] args)
