@@ -321,13 +321,19 @@ namespace encapsulation
             return -1;
         }
 
-        public static void search(int[] arr, int key)
+        public static string AToString(int[] arr)
+        {
+            string str = string.Concat(arr.Select(x => x.ToString()));
+            return str;
+        }
+
+        public static void Search(int[] arr, int key)
         {
             if (arr.Length == 1)
             {
                 if (arr[0] == key)
                 {
-                    Console.WriteLine("there is an instance of " + key + " in " + arr.ToString());
+                    Console.WriteLine("there is an instance of " + key + " in " + AToString(arr));
                     return;
                 }
                 else
@@ -337,13 +343,13 @@ namespace encapsulation
                 }
             }
             Console.WriteLine("the unsorted array is:");
-            Console.WriteLine(arr.ToString());
+            Console.WriteLine(AToString(arr));
             Console.WriteLine("the sorted array is:");
             if (arr.Length <= 10)
                 SelectionSort(arr);
             else
                 Sort(arr);
-            Console.WriteLine(arr.ToString());
+            Console.WriteLine(AToString(arr));
             int a = BinarySearch(arr, key);
             if (a == -1)
                 Console.WriteLine("there are no instances of " + key);
@@ -402,6 +408,20 @@ namespace encapsulation
             l.Add(10);
             l.PrintAll();
             */
+
+            int[] a = { 5, 3, 7, 9, 3, 5, 2, 5, 3, 6, 12, 6, 3, 45, 100 };
+            int[] b = { 3, 5, 2, 4, 3 };
+            int[] c = { 5, 2, 6, 2, 6, 1, 6, 2, 100, 30, -1, 4, -30, 20, 25, 104, 300, 2 };
+            int[] d = { 1, 3, 3, 2 };
+            int[] e = { 1 };
+            int[] f = { 20 };
+            Search(a, 5);
+            Search(b, 3);
+            Search(a, 1);
+            Search(c, 100);
+            Search(d, 4);
+            Search(e, 1);
+            Search(f, 1);
 
 
 
