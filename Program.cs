@@ -325,13 +325,13 @@ namespace encapsulation
             int max = arr.Length - 1;
             while (min <= max)
             {
-                int mid = (min + (min + max) / 2);
+                int mid = min + ((max - min) / 2);
                 if (key == arr[mid])
                     return mid;
                 else if (key < arr[mid])
                     max = mid - 1;
                 else
-                    max = mid + 1;
+                    min = mid + 1;
             }
             return -1;
         }
