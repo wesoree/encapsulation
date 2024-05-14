@@ -336,7 +336,7 @@ namespace encapsulation
             return -1;
         }
 
-        public static string AToString(int[] nums)
+        public static string ToString(int[] nums)
         {
             IntegerLinkedList arr = new IntegerLinkedList();
             for (int i = 0; i < nums.Length; i++)
@@ -363,13 +363,13 @@ namespace encapsulation
                 }
             }
             Console.WriteLine("the unsorted array is:");
-            Console.WriteLine(AToString(arr));
+            Console.WriteLine(ToString(arr));
             Console.WriteLine("the sorted array is:");
             if (arr.Length <= 10)
                 SelectionSort(arr);
             else
                 Sort(arr);
-            Console.WriteLine(AToString(arr));
+            Console.WriteLine(ToString(arr));
             int a = BinarySearch(arr, key);
             if (a == -1)
                 Console.WriteLine(key + " was not found");
