@@ -331,7 +331,7 @@ namespace encapsulation
                 else if (key < arr[mid])
                     max = mid - 1;
                 else
-                    min = mid + 1;
+                    max = mid + 1;
             }
             return -1;
         }
