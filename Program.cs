@@ -280,7 +280,6 @@ namespace encapsulation
 
         public static void Main(string[] args)
         {
-
             int[] a = { 5, 3, 7, 9, 3, 5, 2, 5, 3, 6, 12, 6, 3, 45, 100 };
             int[] b = { 3, 5, 2, 4, 3 };
             int[] c = { 5, 2, 6, 2, 6, 1, 6, 2, 100, 30, -1, 4, -30, 20, 25, 104, 300, 2 };
@@ -294,9 +293,6 @@ namespace encapsulation
             Search(d, 4);
             Search(e, 1);
             Search(f, 1);
-
-
-
         }
     }
 }
