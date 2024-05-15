@@ -11,20 +11,6 @@ using System.Threading.Tasks;
 
 namespace encapsulation
 {
-    class Factorial
-    {
-        public int Array11(int[] nums, int index)
-        {
-            if (index == nums.Length)
-                return 0;
-
-            if (nums[index] == 11)
-                return 1 + Array11(nums, index + 1);
-
-            return Array11(nums, index + 1);
-        }
-    }
-
     public class IntegerLinkedList
     {
         public class Node
@@ -162,79 +148,6 @@ namespace encapsulation
 
     internal class Program
     {
-        public static int CountX(string str)
-        {
-            str = str.ToLower();
-
-            if (str.Length < 1)
-                return 0;
-
-            if (str[0] == 'x')
-                return 1 + CountX(str.Substring(1));
-
-            return 0 + CountX(str.Substring(1));
-        }
-        public static int Triangle(int n)
-        {
-            if (n == 0)
-                return 0;
-
-            return n + Triangle(n - 1);
-        }
-        public static int Fibonacci(int n)
-        {
-            if (n == 0)
-                return 0;
-
-            if (n == 1)
-                return 1;
-
-
-            return Fibonacci(n - 1) + Fibonacci(n - 2);
-        }
-        public static string ChangeA(string str)
-        {
-            if (str.Length < 1)
-                return "";
-
-            if (str[0] == 'a')
-            {
-                return "-" + ChangeA(str.Substring(1));
-            }
-
-            return str[0] + ChangeA(str.Substring(1));
-        }
-        public static int[] ConcatArray(int[] a, int[] b)
-        {
-            int newLength = a.Length + b.Length;
-            int[] newArr = new int[newLength];
-            int cursor = 0;
-
-            for (int i = 0; i < a.Length; i++)
-            {
-                newArr[cursor] = a[i];
-                cursor++;
-            }
-
-            for (int i = 0; i < b.Length; i++)
-            {
-                newArr[cursor] = b[i];
-                cursor++;
-            }
-
-            return newArr;
-        }
-        public int CountNegative(int[] nums)
-        {
-            int count = 0;
-            foreach (int n in nums)
-            {
-                if (n < 0)
-                    count += 1;
-            }
-            return count;
-        }
-
         public static int LinearSearch(int[] nums, int target)
         {
             for (int i = 0;i < nums.Length;i += 1)
@@ -245,18 +158,6 @@ namespace encapsulation
             }
             return -1;
         }
-        
-        public static int CountMult7(int n)
-        {
-            if (n == 0)
-                return 1;
-
-            if (n % 7 == 0)
-                return 1 + CountMult7(n - 1);
-
-            return CountMult7(n - 1);
-        }
-
         public static void SelectionSort(int[] arr)
         {
             for (int i = 0; i < arr.Length - 1; i++)
@@ -379,56 +280,6 @@ namespace encapsulation
 
         public static void Main(string[] args)
         {
-            /*Console.WriteLine(Fibonacci(0)); //0
-            Console.WriteLine(Fibonacci(1)); //1
-            Console.WriteLine(Fibonacci(2)); //1
-            Console.WriteLine(Fibonacci(3)); //2
-            Console.WriteLine(Fibonacci(6)); //8
-            Console.WriteLine(ChangeA("arial")); //-ri-l
-            
-            int[] testape = {1, 2, 3};
-            int[] test = {4, 5, 6};
-            int[] result = ConcatArray(testape, test);
-            
-            Console.WriteLine(AToString(result)); /*
-            IntegerLinkedList list = new IntegerLinkedList();
-            list.Add(3);
-            list.Add(4);
-            list.Add(5);
-            list.PrintAll();
-
-            IntegerLinkedList list2 = new IntegerLinkedList();
-            list2.Add(6);
-            list2.Add(35);
-            list2.Add(59);
-
-            list.Concat(list2);
-            list.PrintAll();
-
-            // Console.WriteLine(list2.Get(0));
-            // Console.WriteLine(list2.Get(2));
-
-            // list.Split(3);
-            Console.WriteLine(CountX("hi")); //0
-            Console.WriteLine(CountX("xhix")); //2
-            Console.WriteLine(CountX("xxhixx")); //4
-            Console.WriteLine(CountX("XXHIXX"));
-            Console.WriteLine(CountX(""));
-
-
-            IntegerArrayList l = new IntegerArrayList();
-            l.Add(1);
-            l.Add(2);
-            l.Add(3);
-            l.Add(4);
-            l.Add(5);
-            l.Add(6);
-            l.Add(7);
-            l.Add(8);
-            l.Add(9);
-            l.Add(10);
-            l.PrintAll();
-            */
 
             int[] a = { 5, 3, 7, 9, 3, 5, 2, 5, 3, 6, 12, 6, 3, 45, 100 };
             int[] b = { 3, 5, 2, 4, 3 };
