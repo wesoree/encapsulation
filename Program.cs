@@ -255,13 +255,13 @@ namespace encapsulation
                 if (arr[0] == key)
                 {
                     Console.WriteLine(key + " found at index 0");
-                    return;
                 }
                 else
                 {
                     Console.WriteLine(key +" was not found");
-                    return;
                 }
+                Console.WriteLine("-----------------------------------------");
+                return;
             }
             Console.WriteLine("the unsorted array is:");
             Console.WriteLine(ToString(arr));
@@ -276,6 +276,7 @@ namespace encapsulation
                 Console.WriteLine(key + " was not found");
             else
                 Console.WriteLine(key + " found at index "  + a);
+            Console.WriteLine("-----------------------------------------");
         }
 
         public static void Main(string[] args)
