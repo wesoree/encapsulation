@@ -180,7 +180,7 @@ namespace encapsulation
             arr[j] = temp;
         }
 
-        public static void Sort(int[] arr)
+        public static void Split(int[] arr)
         {
             if (arr.Length < 2)
                 return; // no need to sort
@@ -191,8 +191,8 @@ namespace encapsulation
                 left[i] = arr[i];
             for (int i = 0; i < arr.Length - mid; i++)
                 right[i] = arr[mid + i];
-            Sort(left);
-            Sort(right);
+            Split(left);
+            Split(right);
             Merge(left, right, arr);
         }
 
@@ -266,10 +266,7 @@ namespace encapsulation
             Console.WriteLine("the unsorted array is:");
             Console.WriteLine(ToString(arr));
             Console.WriteLine("the sorted array is:");
-            if (arr.Length <= 10)
-                SelectionSort(arr);
-            else
-                Sort(arr);
+            Split(arr);
             Console.WriteLine(ToString(arr));
             int a = BinarySearch(arr, key);
             if (a == -1)
