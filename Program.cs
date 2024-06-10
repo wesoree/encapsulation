@@ -237,14 +237,15 @@ namespace encapsulation
             return -1;
         }
 
-        public static string ToString(int[] nums)
+        public static string ToString(int[] arr)
         {
-            IntegerLinkedList arr = new IntegerLinkedList();
-            for (int i = 0; i < nums.Length; i++)
+            string str = "";
+            for (int i = 0; i < arr.Length; i++)
             {
-                arr.Add(nums[i]);
+                str += arr[i] + " ";
             }
-            return arr.LinkString();
+
+            return str;
         }
 
         public static void Search(int[] arr, int key)
