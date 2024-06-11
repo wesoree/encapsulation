@@ -92,21 +92,6 @@ namespace encapsulation
             }
             return pointer.Value;
         }
-
-        public void Copy()
-        {
-            
-        }
-
-        /* public void Slice(int begin, int end)
-        {
-            IntegerLinkedList split = new IntegerLinkedList();
-            split._end = this._end;
-            for (int j = 0; j < i; j++)
-            {
-                
-            }
-        }*/
     }
 
     public class IntegerArrayList
