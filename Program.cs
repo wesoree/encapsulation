@@ -48,20 +48,8 @@ namespace encapsulation
                 this._end = node;
             }
         }
-        
-        public void PrintAll()
-        {
-            Node pointer = this._start;
-            
-            while (pointer != null)
-            {
-                Console.Write(pointer.Value + ", ");
-                pointer = pointer.Next;
-            }
-            Console.WriteLine();
-        }
 
-        public string LinkString()
+        public string LinkedString()
         {
             Node pointer = this._start;
 
