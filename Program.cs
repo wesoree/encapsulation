@@ -192,6 +192,33 @@ namespace encapsulation
                 all[k++] = b[j++];
         }
 
+        public static void QuickSort(int[] arr, int i, int j)
+        {
+
+            if (j <= i) return;
+
+            int pivot = Partition(arr, i, j);
+            QuickSort(arr, i, j - 1);
+            QuickSort(arr, pivot + 1, j);
+        }
+
+        private static int Partition(int[] arr, int i, int j)
+        {
+            int pivot = arr[j];
+            int k = i - 1;
+
+            for (int l = i; l <= j - 1; l++)
+            {
+                if (arr[l] < pivot)
+                {
+                    k++;
+                    Swap(arr, k, l);
+                }
+            }
+            k++;
+            Swap(arr, k, j);
+            return i;
+        }
 
         public static int BinarySearch(int[] arr, int key)
         {
@@ -240,7 +267,7 @@ namespace encapsulation
             Console.WriteLine("the unsorted array is:");
             Console.WriteLine(ToString(arr));
             Console.WriteLine("the sorted array is:");
-            Split(arr);
+            QuickSort(arr, 0, arr.Length - 1);
             Console.WriteLine(ToString(arr));
             int a = BinarySearch(arr, key);
             if (a == -1)
